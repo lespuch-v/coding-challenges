@@ -109,6 +109,79 @@ function capitalizeWords(words) {
   return words.split(' ').map((item) => item.charAt(words[0]).toUpperCase() + item.slice(1, item.length)).join(" ");
 }
 
-console.log(capitalizeWords('hello world')); // Output: "Hello World"
+//console.log(capitalizeWords('hello world')); // Output: "Hello World"
 
 // words.charAt(words[0]).toUpperCase() + words.slice(1, words.length)
+
+// Objective: Write a simple script to display "Hello, JavaScript!" in the console.
+function greeting(){
+  return 'Hello, JavaScript!'
+}
+
+// Objective: Declare two variables, one for your name and one for your age.
+// Display them in a sentence using console.log.
+
+function userInput(name, age){
+  return `Hello ${name}, and your age is ${age}.`;
+}
+
+// Objective: Calculate the area of a rectangle. Take the length and width from user input and display the area.
+
+function areaOfRectangle(length, width){
+  return length * width;
+}
+
+// console.log(areaOfRectangle(8, 3));
+
+// Objective: Write a function that takes a number and returns its square.
+function squareOfNumber(number){
+  return number * number
+}
+
+// Write a script that checks if a number is even or odd and prints an appropriate message in the console.
+function oddOrEven(number){
+  return number %2 === 0
+}
+
+// console.log(oddOrEven(4))
+
+// Objective: Use a loop to print all even numbers from 1 to 20.
+function looping(number){
+  for (let i = 0; i <= number; i++){
+    console.log(i)
+  }
+}
+function fruits(arrOfFruits){
+  for(let i = 0; i < arrOfFruits.length; i++){
+    console.log(arrOfFruits[i])
+  }
+}
+
+// fruits(['apples', 'oranges', 'bannanas', 'citrones', 'kiwis', 'melones', 'katkus'])
+
+// Objective: Create an object representing a car with properties like make, model, and color. Display each property.
+let car = [
+  {
+    'key': 'a',
+    'test': 'b'
+  }
+]
+function items(obj){
+  for (let i = 0; obj.length;i++){
+    console.log(car)
+  }
+}
+
+function palindrome(word){
+  let forward = word.split('')
+  let backwards = word.split('').reverse()
+
+  for(let i = 0; forward.length > i;i++){
+    if(forward[i] !== backwards[i]){
+      return false
+    }
+  }
+  return true;
+}
+
+console.log(palindrome('hannah'))
