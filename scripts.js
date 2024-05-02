@@ -184,4 +184,3 @@ function palindrome(word){
   return true;
 }
 
-console.log(palindrome('hannah'))
