@@ -211,7 +211,24 @@ const removedDuplicates = duplicates.filter((value, index, self) => {
 
 const names = ['alice', 'bob', 'carol'];
 const upperNames = names.map((item) => item.substring(0, 1).toUpperCase() + item.substring(1, item.length));
-console.log(upperNames)
+console.log(upperNames);
 
 const sortedValues = removedDuplicates.sort();
 
+function getDivisorsCnt(n) {
+  let count = 0;
+  if (n === 0) return 1;
+
+  for (let i = 0; i <= Math.sqrt(n); i++) {
+    if (n % i == 0) {
+      if (i == n / i) {
+        count++;
+      } else {
+        count += 2;
+      }
+    }
+  }
+  return count;
+}
+
+console.log(getDivisorsCnt(4));
