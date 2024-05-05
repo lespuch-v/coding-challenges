@@ -211,7 +211,6 @@ const removedDuplicates = duplicates.filter((value, index, self) => {
 
 const names = ['alice', 'bob', 'carol'];
 const upperNames = names.map((item) => item.substring(0, 1).toUpperCase() + item.substring(1, item.length));
-console.log(upperNames);
 
 const sortedValues = removedDuplicates.sort();
 
@@ -231,4 +230,47 @@ function getDivisorsCnt(n) {
   return count;
 }
 
-console.log(getDivisorsCnt(4));
+const numbs = [19, 5, 42, 2, 77];
+
+function sumTwoSmallestNumbers(numbers) {
+  const lowestNumbersOne = Math.min(...numbers);
+  const removedLowestNumber = [];
+
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] !== lowestNumbersOne) {
+      removedLowestNumber.push(numbers[i]);
+    }
+  }
+
+  const lowestNumbersTwo = Math.min(...removedLowestNumber);
+  return lowestNumbersOne + lowestNumbersTwo;
+}
+
+const objArr = [1, [2, [3, [4]], 5]];
+
+function flattenArr(arrObj) {
+  return objArr.flat(Infinity);
+}
+
+console.log(flattenArr(objArr));
+
+const numDuplicates = [1, 2, 3, 3, 4, 5, 5, 6];
+
+function removeDuplications(n) {
+  const objSet = new Set([...n]);
+  const arr = Array.from(objSet);
+  console.log(arr);
+}
+
+// removeDuplications(numDuplicates);
+
+const js = 'javascript';
+
+function findAllLetterAccourences(str) {
+  const regex = /a/g;
+
+  const accurences = str.match(regex);
+  console.log(`Letter: (a) has: ${accurences.length}`);
+}
+
+findAllLetterAccourences(js);
