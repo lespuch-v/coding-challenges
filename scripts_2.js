@@ -111,17 +111,17 @@ function getUniqueValues(obj) {
 
 // console.log(getUniqueValues(cars));
 
-const str = 'Hello, [name]!';
+const str = '';
 const nameObj = { name: 'John' };
 
-function nameAndRepalce(str, name) {
-  return str.replace('[name]', name.name);
+function testtestj(str, name) {
+
 }
 
-// console.log(nameAndRepalce(str, nameObj));
+// console.log(testtest(str, nameObj));
 
 const books = [
-  { title: 'A Tale of Two Cities', year: 1859 },
+  { titleTest: 'A Tale of Two Cities', newYear: 1859 },
   { title: 'Moby Dick', year: 1851 },
   { title: 'War and Peace', year: 1869 },
 ];
